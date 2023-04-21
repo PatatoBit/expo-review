@@ -3,6 +3,8 @@ import * as Font from 'expo-font';
 import Home from './screens/Home';
 import AppLoading from 'expo-app-loading';
 import HomeStack from './routes/HomeStack';
+import AboutStack from './routes/AboutStack';
+import RootDrawerNavigator from './routes/Drawer';
 
 const getFonts = () => Font.loadAsync({ 
   'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'), 
@@ -14,7 +16,7 @@ export default function App() {
   
   if(fontsLoaded){
     return (
-      <HomeStack />
+      <RootDrawerNavigator />
     );
   } else {
     return (
