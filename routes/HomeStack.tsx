@@ -6,14 +6,18 @@ import ReviewDetails from "../screens/ReviewDetails";
 
 const Stack = createNativeStackNavigator();
 
-export default function HomeStack() { 
-	return (
-<NavigationContainer>
-	<Stack.Navigator>
-		<Stack.Screen name="Home" component={Home} />
-		<Stack.Screen name="ReviewDetails" component={ReviewDetails} />
-</Stack.Navigator>
-</NavigationContainer>
-
-	)
+export default function HomeStack() {
+  return (
+    <NavigationContainer>
+			<Stack.Navigator
+			screenOptions={
+					{
+					headerStyle: {backgroundColor: "#eee"}
+				}
+			}>
+				<Stack.Screen name="Home" component={Home} options={ {title: "Game Zone"}} />
+        <Stack.Screen name="ReviewDetails" component={ReviewDetails} options={ {title: "Game Zone", }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
