@@ -4,5 +4,5 @@ I'm following [The Net Ninja's React native tutorial](https://www.youtube.com/pl
 
 ## Links
 
-- [Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ)
-- [The Net Ninja](https://www.youtube.com/@NetNinja)
+-   [Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ)
+-   [The Net Ninja](https://www.youtube.com/@NetNinja)
