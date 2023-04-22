@@ -8,13 +8,14 @@ const Stack = createNativeStackNavigator()
 export default function AboutStack() {
 	return (
 		<Stack.Navigator
-      screenOptions={{
-          headerTitle: () => <Header />,
-					headerStyle: {
-						backgroundColor: "#eee",
-					},
-					headerTintColor: "#444",
-        }}
+     screenOptions={({ navigation }) => ({
+        headerTitle: () => <Header navigation={navigation} />,
+        headerStyle: {
+          backgroundColor: "#eee",
+        },
+        headerTintColor: "#444",
+      })}
+
       >
         
         <Stack.Screen
