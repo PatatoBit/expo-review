@@ -6,17 +6,17 @@ import AboutStack from './AboutStack'
 const Drawer = createDrawerNavigator()
 
 export default function RootDrawerNavigator() {
-    return (
-        <NavigationContainer>
-            <Drawer.Navigator
-                initialRouteName="Home"
-                screenOptions={{
-                    headerShown: false,
-                }}
-            >
-                <Drawer.Screen name="Main" component={HomeStack} />
-                <Drawer.Screen name="About" component={AboutStack} />
-            </Drawer.Navigator>
-        </NavigationContainer>
-    )
+  return (
+    <NavigationContainer>
+      <Drawer.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Drawer.Screen name="Main" component={HomeStack} />
+        <Drawer.Screen name="About" component={AboutStack} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
 }

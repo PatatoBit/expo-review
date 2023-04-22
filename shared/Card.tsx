@@ -1,35 +1,35 @@
 import { StyleSheet, View } from 'react-native'
 
 type Props = {
-    children: string | JSX.Element | JSX.Element[]
+  children: string | JSX.Element | JSX.Element[]
 }
 
 export default function Card({
-    children,
+  children,
 }: {
-    children: string | JSX.Element | JSX.Element[]
+  children: string | JSX.Element | JSX.Element[]
 }) {
-    return (
-        <View style={styles.card}>
-            <View style={styles.cardContent}>{children}</View>
-        </View>
-    )
+  return (
+    <View style={styles.card}>
+      <View style={styles.cardContent}>{children}</View>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-    card: {
-        borderRadius: 6,
-        elevation: 3,
-        backgroundColor: '#fff',
-        shadowOffset: { width: 1, height: 1 },
-        shadowColor: '#333',
-        shadowOpacity: 0.3,
-        shadowRadius: 2,
-        marginHorizontal: 4,
-        marginVertical: 6,
-    },
-    cardContent: {
-        marginHorizontal: 18,
-        marginVertical: 10,
-    },
+  card: {
+    borderRadius: 6,
+    elevation: 3,
+    backgroundColor: '#fff',
+    shadowOffset: { width: 1, height: 1 },
+    shadowColor: '#333',
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    marginHorizontal: 4,
+    marginVertical: 6,
+  },
+  cardContent: {
+    marginHorizontal: 18,
+    marginVertical: 10,
+  },
 })
