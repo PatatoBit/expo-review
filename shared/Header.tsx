@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 export default function Header({ navigation }: any) {
@@ -15,6 +15,7 @@ export default function Header({ navigation }: any) {
                 style={styles.icon}
             />
             <View>
+                {/* <Image source={ require('../assets/heart_logo.png')} /> */}
                 <Text style={styles.headerText}>GameZone</Text>
             </View>
         </View>

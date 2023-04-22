@@ -14,7 +14,7 @@ export default function RootDrawerNavigator() {
                     headerShown: false,
                 }}
             >
-                <Drawer.Screen name="Home" component={HomeStack} />
+                <Drawer.Screen name="Main" component={HomeStack} />
                 <Drawer.Screen name="About" component={AboutStack} />
             </Drawer.Navigator>
         </NavigationContainer>

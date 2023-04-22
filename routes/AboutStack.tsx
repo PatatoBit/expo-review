@@ -16,7 +16,7 @@ export default function AboutStack() {
                 headerTintColor: '#444',
             })}
         >
-            <Stack.Screen name="About" component={About} />
+            <Stack.Screen name="About Us" component={About} />
         </Stack.Navigator>
     )
 }
