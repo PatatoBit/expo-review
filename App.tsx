@@ -1,18 +1,19 @@
-import { View } from 'react-native/';
-import React, { useCallback, useEffect, useState } from 'react';
-import * as Font from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
-import RootDrawerNavigator from './routes/Drawer';
+import { View } from "react-native/";
+import React, { useCallback, useEffect, useState } from "react";
+import * as Font from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import RootDrawerNavigator from "./routes/Drawer";
 
-const getFonts = () => Font.loadAsync({ 
-  'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'), 
-  'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf')
-}); 
+const getFonts = () =>
+  Font.loadAsync({
+    "nunito-regular": require("./assets/fonts/Nunito-Regular.ttf"),
+    "nunito-bold": require("./assets/fonts/Nunito-Bold.ttf"),
+  });
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false)
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
     async function prepare() {
@@ -20,14 +21,13 @@ export default function App() {
         // Pre-load fonts, make any API calls you need to do here
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
-        await getFonts()
-
+        await getFonts();
       } catch (e) {
         console.warn(e);
       } finally {
         // Tell the application to render
         console.log("Loaded");
-        
+
         setFontsLoaded(true);
       }
     }
@@ -49,10 +49,10 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-  
+
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
       {fontsLoaded && <RootDrawerNavigator />}
     </View>
-  )
+  );
 }
