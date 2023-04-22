@@ -8,10 +8,16 @@ import {
 } from 'react-native'
 import { useState } from 'react'
 
+import { Modal } from 'react-native'
+
+import { MaterialIcons } from '@expo/vector-icons'
+
 import { globalStyles } from '../styles/global'
 import Card from '../shared/Card'
 
 export default function Home({ navigation }: any) {
+  const [modalOpen, setModalOpen] = useState(false)
+
   const [reviews, setReviews] = useState([
     {
       title: 'Zelda, Breath of Fresh Air',
@@ -35,6 +41,27 @@ export default function Home({ navigation }: any) {
 
   return (
     <View style={globalStyles.container}>
+      <Modal visible={modalOpen} animationType="slide">
+        <View style={globalStyles.modalContent}>
+          <MaterialIcons
+            name="close"
+            size={24}
+            onPress={() => {
+              setModalOpen(false)
+            }}
+          />
+          <Text>Modal</Text>
+        </View>
+      </Modal>
+
+      <MaterialIcons
+        name="add"
+        size={24}
+        onPress={() => {
+          setModalOpen(true)
+        }}
+      />
+
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
